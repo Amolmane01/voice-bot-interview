@@ -10,10 +10,9 @@ const app = express();
 // Middleware
 // At the top, after const app = express();
 app.use(cors({
-    origin: ['https://voice-bot-interview-ddpal7sil-amolmane01s-projects.vercel.app', '*'],  // Add your Vercel URL
+    origin: '*',                    // Allow all for now (easy for testing)
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-    credentials: true
+    allowedHeaders: ['Content-Type']
 }));
 
 app.use(express.json({ limit: '10mb' }));
