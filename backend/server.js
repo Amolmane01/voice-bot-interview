@@ -8,10 +8,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
+// At the top, after const app = express();
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['https://voice-bot-interview-ddpal7sil-amolmane01s-projects.vercel.app', '*'],  // Add your Vercel URL
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type'],
+    credentials: true
 }));
 
 app.use(express.json({ limit: '10mb' }));
