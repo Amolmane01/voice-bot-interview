@@ -58,7 +58,7 @@ function App() {
   const handleSendToAI = async (text) => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5003/api/chat', {
+      const res = await fetch('https://voice-bot-interview.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })
